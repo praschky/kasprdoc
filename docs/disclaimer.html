@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>KASPR Data Documentation</title>
-  <meta name="description" content="KASPR Data Documentation" />
+  <title>4 Disclaimer | KASPR Data Documentation</title>
+  <meta name="description" content="4 Disclaimer | KASPR Data Documentation" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="KASPR Data Documentation" />
+  <meta property="og:title" content="4 Disclaimer | KASPR Data Documentation" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="KASPR Data Documentation" />
+  <meta name="twitter:title" content="4 Disclaimer | KASPR Data Documentation" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="&lt;“images/favicon_16.ico”&gt;" type="image/x-icon" />
-
-<link rel="next" href="data-descriptor.html"/>
+<link rel="prev" href="suggested-use.html"/>
+<link rel="next" href="license.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -119,23 +119,43 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">KASPR Data Documentation</h1>
-<p class="author"><em>The KASPR Team</em></p>
-<p class="date"><em>2022-01-25</em></p>
-</div>
-<div id="overview" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Overview</h1>
-<p>This document describes the <strong>KDH Global ICT Intel Data Product</strong> developed by KASPR Datahaus PTY LTD (“KDH”). Our few-hourly (e.g. 1h, 3h, 6h) regional (national, adm1, or adm2 accordingly) level products provide an aggregated measure of region’s ICT Infrastructure, via millions of individual internet protocol (IP v4) address observations. The product provides the time-varying availability and quality of a region’s infrastructure aggregated <em><strong>across the geographic space of the region.</strong> As such, the sampling design intentionally emphasises diversity in </em>geographic* units rather than conducting a representative sample of all IP addresses from the region detached from geo-location.</p>
+<div id="disclaimer" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Disclaimer</h1>
+<p>KDH Global ICT Intel Data is constructed from remote measurements based on the Internet Control Message Protocol (ICMP) echo request routine. As any remote measurement technology, KDH Global ICT Intel Data can only be an approximation of the local internet infrastructure and human experience of the internet on the ground. It is important to note that:</p>
+<ol style="list-style-type: decimal">
+<li>Our measurements only cover IP addresses in the IPv4 (IP version 4) space.</li>
+<li>Any IP addresses that are not reachable by ICMP echo requests, are not included in our measurements.
+3.The geolocation information for each of the individual IP addresses is based on data from Third Party providers and are updated on a monthly basis. The level of accuracy of the IP geolocation can vary across geographies and time and this can affect the accuracy of the KDH Global ICT Intel Data products. KASPR Datahaus PTY LTD makes no additional or express or implied warranties related to the accuracy of this location data across space and time.</li>
+</ol>
+<p>Furthermore, KDH data acquisition and data service provision relies on an assumed wider operating environment beyond the control or authority of KDH. Failure or interruption in any aspect of this operating environment can render KDH unable to acquire or provide data to clients in a timely manner, or at all. Assumed features of the operating environment include, but are not limited to:</p>
+<ol style="list-style-type: decimal">
+<li>A functioning global internet layer, allowing the free flow of information packets, especially ICMP echo requests, across all networks and jurisdictions;</li>
+<li>Network neutrality such that KDH packets are managed in the internet layer in an equally expeditious manner to any other packet on the network;</li>
+<li>A fully functional and operational commercial cloud infrastructure network, allowing remote server operation, interaction, data transmission between remote servers and storage locations, query at rest functions, and programmatic interaction and job activitation; and</li>
+<li>A functioning remote authentication service and delivery mechanism to the client for final data transfer.</li>
+</ol>
+<p>AS SUCH, KDH GLOBAL ICT INTEL DATA IS PROVIDED “AS IS” AND KASPR DATAHAUS PTY LTD MAKES NO ADDITIONAL OR EXPRESS OR IMPLIED WARRANTIES RELATING TO THE KASPR DATAHAUS DATA INCLUDING BY WAY OF EXAMPLE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p>
+<div id="background-intellectual-property" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Background Intellectual Property</h2>
+<p>In preparing these products KASPR Datahaus Pty Ltd asserts the ownership of the following methods and knowledge as background intellectual property in the field of measuring internet activity, latency and detection of anomalies, globally:</p>
+<ul>
+<li>A method to scan, aggregate, analyse and visualise the number of latency (measured by ping response time) of very large numbers of internet-connected Internet Protocol addresses at a given location and time to produce internet measurement data;</li>
+<li>Methods to carry out these functions from an online desktop device, remote server, or team of servers located in commercial cloud-based hosting platforms.</li>
+<li>Methods to join internet measurement data with geo-location data for the purposes of re-aggregation, re-analysis, and visualisation;</li>
+<li>A sampling method that aims at reducing the number of scanned IPs that are required to infer reliable measurements;</li>
+<li>Methods to detect statistical anomalies and irregularities in internet measurement data, with tuneable thresholds; and</li>
+<li>Methods to remotely deliver internet measurement data and derivative datasets to client end-points.</li>
+</ul>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="data-descriptor.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="suggested-use.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="license.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -166,7 +186,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/index.Rmd",
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/04-disclaimer.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -174,7 +194,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/index.Rmd",
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/04-disclaimer.Rmd",
 "text": null
 },
 "download": null,

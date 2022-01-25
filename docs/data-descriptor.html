@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>KASPR Data Documentation</title>
-  <meta name="description" content="KASPR Data Documentation" />
+  <title>2 Data Descriptor | KASPR Data Documentation</title>
+  <meta name="description" content="2 Data Descriptor | KASPR Data Documentation" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="KASPR Data Documentation" />
+  <meta property="og:title" content="2 Data Descriptor | KASPR Data Documentation" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="KASPR Data Documentation" />
+  <meta name="twitter:title" content="2 Data Descriptor | KASPR Data Documentation" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="&lt;“images/favicon_16.ico”&gt;" type="image/x-icon" />
-
-<link rel="next" href="data-descriptor.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="suggested-use.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -119,23 +119,40 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">KASPR Data Documentation</h1>
-<p class="author"><em>The KASPR Team</em></p>
-<p class="date"><em>2022-01-25</em></p>
+<div id="data-descriptor" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Data Descriptor</h1>
+<p>This document describes the <strong>KDH Global ICT Intel Data Product</strong> developed by KASPR Datahaus PTY LTD (“KDH”). Our few-hourly (e.g. 1h, 3h, 6h) regional (national, adm1, or adm2 accordingly) level products provide an aggregated measure of region’s ICT Infrastructure, via millions of individual internet protocol (IP v4) address observations. The product provides the time-varying availability and quality of a region’s infrastructure aggregated <strong>across the geographic space of the region.</strong> As such, the sampling design intentionally emphasises diversity in <em>geographic</em> units rather than conducting a representative sample of all IP addresses from the region detached from geo-location.</p>
+<div id="sampling-design" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Sampling Design</h2>
+<p>To provide a product of global scale and frequency, a random sampling methodology is necessary within some geographic boundaries due to a very high concentration of IP addresses allocated there, e.g. districts of major cities. In these, often small sub-urban geographic boundaries, a randomised <em>sample</em> of 100,000 IPs is drawn to measure a diversity of unique physical locations within the boundary. Where the internet address concentration is lower, we conduct a <em>census</em> measurement design, i.e. measuring the activity and quality of every address assigned to be in that geographic region. Assignment of IP v4 blocks to regions is conducted monthly by a third-party. Subscribers to KASPR Datahaus products who wish to know more about geo-spatial assignment can inquire with the provider directly.</p>
+<p>To emphasise, the priority of the few-hourly Global ICT Intel product is to provide a consistent, scientific sampling methodology across tens of thousands of small geographic boundaries world-wide, such that at the <em>regional</em> level aggregate, significant shocks and time-varying activity patterns across the entire geographic domain of the region are incorporated.</p>
 </div>
-<div id="overview" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Overview</h1>
-<p>This document describes the <strong>KDH Global ICT Intel Data Product</strong> developed by KASPR Datahaus PTY LTD (“KDH”). Our few-hourly (e.g. 1h, 3h, 6h) regional (national, adm1, or adm2 accordingly) level products provide an aggregated measure of region’s ICT Infrastructure, via millions of individual internet protocol (IP v4) address observations. The product provides the time-varying availability and quality of a region’s infrastructure aggregated <em><strong>across the geographic space of the region.</strong> As such, the sampling design intentionally emphasises diversity in </em>geographic* units rather than conducting a representative sample of all IP addresses from the region detached from geo-location.</p>
+<div id="global-ict-intel-data---variables" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Global ICT Intel Data - Variables</h2>
+<p>The two Global ICT Intel measures are defined as follows:</p>
+<p><strong>number_unique_active_ips_in_sample:</strong> The sum of all unique active IP addresses in the region based on our sampling and census methodology (described above), where active means that the IP was online at least once in the sampling period. The measure only covers IP addresses in the IPv4 (IP version 4) space. This measure also serves as the unique IP sample size for the <strong>rtt</strong> measures, described below.</p>
+<p><strong>rtt_X_norm:</strong> These are proxy measures for the <strong>temporal quality</strong> of the ICT infrastructure in a region. They are based on the ping response time (in ms) which measures the round-trip time (`rtt’) for a small data package sent from our scanning platforms to each individual IP address. To account for IP-specific noise, in a first step, the average rtt (rtt’) over all rtt measurements of a single IP is calculated. Then, in a second step, the average and variance of these normalised rtt values are used to form the two quality measures. In this way, focus is given to the <em>typical</em> IP latency of the parcel of IPs in the geographic region, and the <em>between</em> IP variance arising from differences in the quality of ICT infrastructure across IPs, rather than idiosyncratic properties of a particular IP in either measure.</p>
+<ul>
+<li><strong>rtt_mean_norm</strong> is the average ping response time of all online IP addresses sampled in an region over the period. (i.e. mean(rtt’))</li>
+<li><strong>rtt_var_norm</strong> is the variance of ping response times of all online IP addresses in a region over the period. (i.e. var(rtt’))</li>
+</ul>
+<p>The variable <strong>day_indicator</strong> indicates when our scanning and aggregation technology crosses over from one scanning phase to the next (approximately around the 8-10th of a new month). It takes the value of 1 for most days and the value of 2 if it is a cross-over day. The impact is normally negligible during the cross-over days. The main variable impacted would be <strong>number_unique_active_ips_in_sample</strong>. In our own back-testing, no model selected this feature as important, confirming that the cross-over is not informationally relevant.</p>
+</div>
+<div id="timing-definitions" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Timing Definitions</h2>
+<p>Values of Unix timestamp *<strong>time_e</strong> and corresponding time string <strong>time_e_utc_str</strong> indicate the <strong>start</strong> of the period for which the measurements pertain. For example, for our 3-hourly products, a timestamp corresponding to <code>12:00:00.000</code> indicates measurements taken between <code>12:00:00.000</code> and <code>14:59:59.999</code>.</p>
+<p>For ease of use, we also provide three additional variables, <strong>timezone_offset</strong>, <strong>timezone_name</strong>, and <strong>time_local</strong> which provide the region’s offset (from UTC in hours), IANA timezone name, and the adjusted time equivalent to the UTC time with local offset applied.</p>
+<p>Note: if the larger region (e.g. national) has more than one timezone within it (e.g. at adm1 level), the most frequent timezone across the lower geographic zones is applied to the larger region.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="data-descriptor.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="suggested-use.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -166,7 +183,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/index.Rmd",
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/02-descriptor.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -174,7 +191,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/index.Rmd",
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/02-descriptor.Rmd",
 "text": null
 },
 "download": null,

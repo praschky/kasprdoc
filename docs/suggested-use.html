@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>KASPR Data Documentation</title>
-  <meta name="description" content="KASPR Data Documentation" />
+  <title>3 Suggested Use | KASPR Data Documentation</title>
+  <meta name="description" content="3 Suggested Use | KASPR Data Documentation" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="KASPR Data Documentation" />
+  <meta property="og:title" content="3 Suggested Use | KASPR Data Documentation" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="KASPR Data Documentation" />
+  <meta name="twitter:title" content="3 Suggested Use | KASPR Data Documentation" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="&lt;“images/favicon_16.ico”&gt;" type="image/x-icon" />
-
-<link rel="next" href="data-descriptor.html"/>
+<link rel="prev" href="data-descriptor.html"/>
+<link rel="next" href="disclaimer.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -119,14 +119,14 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">KASPR Data Documentation</h1>
-<p class="author"><em>The KASPR Team</em></p>
-<p class="date"><em>2022-01-25</em></p>
-</div>
-<div id="overview" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Overview</h1>
-<p>This document describes the <strong>KDH Global ICT Intel Data Product</strong> developed by KASPR Datahaus PTY LTD (“KDH”). Our few-hourly (e.g. 1h, 3h, 6h) regional (national, adm1, or adm2 accordingly) level products provide an aggregated measure of region’s ICT Infrastructure, via millions of individual internet protocol (IP v4) address observations. The product provides the time-varying availability and quality of a region’s infrastructure aggregated <em><strong>across the geographic space of the region.</strong> As such, the sampling design intentionally emphasises diversity in </em>geographic* units rather than conducting a representative sample of all IP addresses from the region detached from geo-location.</p>
+<div id="suggested-use" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Suggested Use</h1>
+<ul>
+<li>Due to differences in the setup of the physical backbone of each region’s ICT infrastructure, comparing the raw levels of our measures between regions (between variation) is not advised.</li>
+<li>The value of the Global ICT Intel product comes from the hourly and daily, time-varying signal at the given regional-level ( <strong>within variation</strong>). As such it is ideally suited to be combined with other time-series (e.g. few-hourly, daily, weekly, monthly) data from the respective region.</li>
+<li>If a comparison of changes in ICT infrastructure <em>between</em> geographic regions is desired, a good approach would be to simply build the first differences of our measures at the regional level and compare, or, to use the pre-prepared index values as given.</li>
+<li>Given the high-frequency of the Global ICT Intel product, it is well suited to detect shocks to a region’s ICT infrastructure. These shocks can include electricity outages, political events, violent conflict, natural disasters, or sovereign suppression activities.</li>
+</ul>
 
 </div>
             </section>
@@ -134,8 +134,8 @@
           </div>
         </div>
       </div>
-
-<a href="data-descriptor.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-descriptor.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="disclaimer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -166,7 +166,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/index.Rmd",
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/03-use_cases.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -174,7 +174,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/index.Rmd",
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/03-use_cases.Rmd",
 "text": null
 },
 "download": null,

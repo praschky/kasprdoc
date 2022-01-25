@@ -1,0 +1,8 @@
+# Suggested Use
+
+ 
++ Due to differences in the setup of the physical backbone of each region's ICT infrastructure, comparing the raw levels of our measures between regions (between variation) is not advised.
++ The value of the Global ICT Intel product comes from the hourly and daily, time-varying signal at the given regional-level ( **within variation**). As such it is ideally suited to be combined with other time-series (e.g. few-hourly, daily, weekly, monthly) data from the respective region.
++ If a comparison of changes in ICT infrastructure  *between* geographic regions is desired, a good approach would be to simply build the first differences of our measures at the regional level and compare, or, to use the pre-prepared index values as given.
++ Given the high-frequency of the Global ICT Intel product, it is well suited to detect shocks to a region's ICT infrastructure. These shocks can include electricity outages, political events, violent conflict, natural disasters, or sovereign suppression activities.
+ 

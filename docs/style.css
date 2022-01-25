@@ -12,3 +12,68 @@ pre {
 pre code {
   white-space: inherit;
 }
+
+
+/*--- LOGO ---*/
+
+.toc-logo {
+  width: 200px !important;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.toc-logo img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.summary > li:first-child {
+  height: auto !important; 
+}
+
+/*------------ TOC --------------*/
+
+.tocify {
+  position: -webkit-sticky;
+  position: sticky; 
+  top: 120px; /*Controls where TOC stops when sticky */
+  width: 100% !important;
+  border: none;
+}
+
+.book .book-summary {
+  background: white;
+  border-right: none;
+}
+
+
+
+.list-group-item {
+    color: #2D61A7;
+    font-size: 12px;
+}
+
+.list-group-item.active {
+    color: #2D61A7;
+    background-color: white;
+    border: none;
+}
+
+.list-group-item:hover, 
+.list-group-item.active:hover {
+    color:  #2D61A7;
+    background-color: white;
+}
+
+ /*------------- Whole Document---------------- */
+ 
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700&display=swap');
+
+
+
+body {
+    font-family: 'Muli';
+    font-size: 16px;
+}

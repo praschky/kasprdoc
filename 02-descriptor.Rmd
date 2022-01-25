@@ -1,0 +1,36 @@
+# Data Descriptor
+
+This document describes the **KDH Global ICT Intel Data Product** developed by KASPR Datahaus PTY LTD ("KDH"). Our few-hourly (e.g. 1h, 3h, 6h) regional (national, adm1, or adm2 accordingly) level products provide an aggregated measure of region's ICT Infrastructure, via millions of individual internet protocol (IP v4) address observations. The product provides the time-varying availability and quality of a region's infrastructure aggregated **across the geographic space of the region.** As such, the sampling design intentionally emphasises diversity in *geographic* units rather than conducting a representative sample of all IP addresses from the region detached from geo-location.
+
+
+## Sampling Design
+
+To provide a product of global scale and  frequency, a random sampling methodology is necessary within some geographic boundaries due to a very high concentration of IP addresses allocated there, e.g. districts of major cities. In these, often small sub-urban geographic boundaries, a randomised  *sample* of 100,000 IPs is drawn to measure a diversity of unique physical locations within the boundary.  Where the internet address concentration is lower, we conduct a *census* measurement design, i.e. measuring the activity and quality of every address assigned to be in that geographic region. Assignment of IP v4 blocks to regions is conducted monthly by a third-party. Subscribers to KASPR Datahaus products who wish to know more about geo-spatial assignment can inquire with the provider directly.
+
+To emphasise, the priority of the few-hourly Global ICT Intel product is to provide a consistent, scientific sampling methodology across tens of thousands of small geographic boundaries world-wide, such that at the  *regional* level aggregate, significant shocks and time-varying activity patterns across the entire geographic domain of the region are incorporated.
+
+
+## Global ICT Intel Data - Variables
+
+The two Global ICT Intel measures are defined as follows:
+
+ 
+**number\_unique\_active\_ips\_in\_sample:** The sum of all unique active IP addresses in the region based on our sampling and census methodology (described above), where active means that the IP was online at least once in the sampling period. The measure only covers IP addresses in the IPv4 (IP version 4) space. This measure also serves as the unique IP sample size for the  **rtt** measures, described below.
+    
+**rtt\_X\_norm:** These are proxy measures for the **temporal quality** of the ICT infrastructure in a region. They are based on the ping response time (in ms) which measures the round-trip time (`rtt') for a small data package sent from our scanning platforms to each individual IP address. To account for IP-specific noise, in a first step, the average rtt (rtt') over all rtt measurements of a single IP is calculated. Then, in a second step, the average and variance of these normalised rtt values are used to form the two quality measures. In this way, focus is given to the  *typical* IP latency of the parcel of IPs in the geographic region, and the  *between* IP variance arising from differences in the quality of ICT infrastructure across IPs, rather than idiosyncratic properties of a particular IP in either measure.
+ 
++  **rtt\_mean\_norm** is the average ping response time of all online IP addresses sampled in an  region over the period. (i.e. mean(rtt'))
++ **rtt\_var\_norm** is the variance of ping response times of all online IP addresses in a region over the period. (i.e. var(rtt'))
+ 
+ 
+    
+The variable  **day\_indicator** indicates when our scanning and aggregation technology crosses over from one scanning phase to the next (approximately around the 8-10th of a new month). It takes the value of 1 for most days and the value of 2 if it is a cross-over day. The impact is normally negligible during the cross-over days. The main variable impacted would be  **number\_unique\_active\_ips\_in\_sample**. In our own back-testing, no model selected this feature as important, confirming that the cross-over is not informationally relevant.
+
+
+## Timing Definitions
+
+Values of Unix timestamp ***time\_e** and corresponding time string  **time\_e\_utc\_str** indicate the  **start** of the period for which the measurements pertain. For example, for our 3-hourly products, a timestamp corresponding to `12:00:00.000` indicates measurements taken between `12:00:00.000` and `14:59:59.999`.
+
+For ease of use, we also provide three additional variables,  **timezone\_offset**, **timezone\_name**, and **time\_local** which provide the region's offset (from UTC in hours), IANA timezone name, and the adjusted time equivalent to the UTC time with local offset applied.
+
+Note: if the larger region (e.g. national) has more than one timezone within it (e.g. at adm1 level), the most frequent timezone across the lower geographic zones is applied to the larger region.

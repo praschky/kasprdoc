@@ -3,6 +3,14 @@ output_dir: docs
 delete_merged_file: true
 edit: https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/%s
 view: https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/%s
+
+md_files:
+- index.Rmd
+- 02-descriptor.Rmd
+- 03-use_cases.Rmd
+- 04-disclaimer.Rmd
+- 05-license.Rmd
+
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: ""

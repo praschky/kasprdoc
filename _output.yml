@@ -3,6 +3,13 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">SHORT TITLE HERE</a></li>
+        <li class="toc-logo"><a href="./"><img src="images/Logos/Logo_Blue_Black_Trans.png" style="float: left"></a></li>
+        <li><a href="./">Data Documentation</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+    sharing:
+      github: yes
+      facebook: no
+      twitter: yes
+      all: no
