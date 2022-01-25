@@ -1,13 +1,21 @@
 --- 
-title: "KASPR Data Documentation"
-author: "The KASPR Team"
-date: "`r Sys.Date()`"
+title: "KASPR Datahaus Documentation"
+#author: "The KASPR Team"
+#date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-favicon: <"images/favicon_16.ico">
+favicon: images/favicon_16.ico
+cover-image: images/kdh_hero2.png
 ---
 
-# Overview
+# KASPR web-store
+
+ ```{r echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("images/kdh_hero2.png")
+```
 
  
-This document describes the **KDH Global ICT Intel Data Product** developed by KASPR Datahaus PTY LTD ("KDH"). Our few-hourly (e.g. 1h, 3h, 6h) regional (national, adm1, or adm2 accordingly) level products provide an aggregated measure of region's ICT Infrastructure, via millions of individual internet protocol (IP v4) address observations. The product provides the time-varying availability and quality of a region's infrastructure aggregated ***across the geographic space of the region.** As such, the sampling design intentionally emphasises diversity in *geographic* units rather than conducting a representative sample of all IP addresses from the region detached from geo-location.
+
+Welcome to the KASPR Datahaus web-store.
+
+In this document you can learn more about our data products and our webstore.
  

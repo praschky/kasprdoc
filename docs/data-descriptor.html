@@ -4,33 +4,31 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Data Descriptor | KASPR Data Documentation</title>
-  <meta name="description" content="2 Data Descriptor | KASPR Data Documentation" />
+  <title>2 Data Descriptor | KASPR Datahaus Documentation</title>
+  <meta name="description" content="2 Data Descriptor | KASPR Datahaus Documentation" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Data Descriptor | KASPR Data Documentation" />
+  <meta property="og:title" content="2 Data Descriptor | KASPR Datahaus Documentation" />
   <meta property="og:type" content="book" />
   
-  
+  <meta property="og:image" content="/images/kdh_hero2.png" />
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Data Descriptor | KASPR Data Documentation" />
+  <meta name="twitter:title" content="2 Data Descriptor | KASPR Datahaus Documentation" />
   
   
-  
-
-<meta name="author" content="The KASPR Team" />
+  <meta name="twitter:image" content="/images/kdh_hero2.png" />
 
 
-<meta name="date" content="2022-01-25" />
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  <link rel="shortcut icon" href="&lt;“images/favicon_16.ico”&gt;" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/favicon_16.ico" type="image/x-icon" />
 <link rel="prev" href="index.html"/>
 <link rel="next" href="suggested-use.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
@@ -74,12 +72,13 @@
 <li><a href="./">Data Documentation</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> KASPR web-store</a></li>
 <li class="chapter" data-level="2" data-path="data-descriptor.html"><a href="data-descriptor.html"><i class="fa fa-check"></i><b>2</b> Data Descriptor</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="data-descriptor.html"><a href="data-descriptor.html#sampling-design"><i class="fa fa-check"></i><b>2.1</b> Sampling Design</a></li>
 <li class="chapter" data-level="2.2" data-path="data-descriptor.html"><a href="data-descriptor.html#global-ict-intel-data---variables"><i class="fa fa-check"></i><b>2.2</b> Global ICT Intel Data - Variables</a></li>
 <li class="chapter" data-level="2.3" data-path="data-descriptor.html"><a href="data-descriptor.html#timing-definitions"><i class="fa fa-check"></i><b>2.3</b> Timing Definitions</a></li>
+<li class="chapter" data-level="2.4" data-path="data-descriptor.html"><a href="data-descriptor.html#data-fields"><i class="fa fa-check"></i><b>2.4</b> Data Fields</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="suggested-use.html"><a href="suggested-use.html"><i class="fa fa-check"></i><b>3</b> Suggested Use</a></li>
 <li class="chapter" data-level="4" data-path="disclaimer.html"><a href="disclaimer.html"><i class="fa fa-check"></i><b>4</b> Disclaimer</a>
@@ -111,7 +110,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">KASPR Data Documentation</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">KASPR Datahaus Documentation</a>
           </h1>
         </div>
 
@@ -143,6 +142,9 @@
 <p>Values of Unix timestamp *<strong>time_e</strong> and corresponding time string <strong>time_e_utc_str</strong> indicate the <strong>start</strong> of the period for which the measurements pertain. For example, for our 3-hourly products, a timestamp corresponding to <code>12:00:00.000</code> indicates measurements taken between <code>12:00:00.000</code> and <code>14:59:59.999</code>.</p>
 <p>For ease of use, we also provide three additional variables, <strong>timezone_offset</strong>, <strong>timezone_name</strong>, and <strong>time_local</strong> which provide the region’s offset (from UTC in hours), IANA timezone name, and the adjusted time equivalent to the UTC time with local offset applied.</p>
 <p>Note: if the larger region (e.g. national) has more than one timezone within it (e.g. at adm1 level), the most frequent timezone across the lower geographic zones is applied to the larger region.</p>
+</div>
+<div id="data-fields" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Data Fields</h2>
 
 </div>
 </div>

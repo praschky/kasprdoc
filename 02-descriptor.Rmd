@@ -23,7 +23,6 @@ The two Global ICT Intel measures are defined as follows:
 + **rtt\_var\_norm** is the variance of ping response times of all online IP addresses in a region over the period. (i.e. var(rtt'))
  
  
-    
 The variable  **day\_indicator** indicates when our scanning and aggregation technology crosses over from one scanning phase to the next (approximately around the 8-10th of a new month). It takes the value of 1 for most days and the value of 2 if it is a cross-over day. The impact is normally negligible during the cross-over days. The main variable impacted would be  **number\_unique\_active\_ips\_in\_sample**. In our own back-testing, no model selected this feature as important, confirming that the cross-over is not informationally relevant.
 
 
@@ -34,3 +33,9 @@ Values of Unix timestamp ***time\_e** and corresponding time string  **time\_e\_
 For ease of use, we also provide three additional variables,  **timezone\_offset**, **timezone\_name**, and **time\_local** which provide the region's offset (from UTC in hours), IANA timezone name, and the adjusted time equivalent to the UTC time with local offset applied.
 
 Note: if the larger region (e.g. national) has more than one timezone within it (e.g. at adm1 level), the most frequent timezone across the lower geographic zones is applied to the larger region.
+
+
+## Data Fields
+
+
+
